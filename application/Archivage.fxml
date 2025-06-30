@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.ArchivageController">
+
+    <center>
+        <ListView fx:id="listViewEmails" prefWidth="600" prefHeight="400"/>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" style="-fx-background-color: #f0f0f0;" alignment="CENTER_RIGHT">
+            <Button fx:id="btnArchiver" text="Archiver" maxWidth="150"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

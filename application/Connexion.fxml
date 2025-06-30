@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.ConnexionController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Connexion Email"/>
+    
+    <TextField fx:id="emailField" promptText="Adresse email"/>
+    <PasswordField fx:id="passwordField" promptText="Mot de passe"/>
+
+    <Button text="Se connecter" onAction="#handleConnexion"/>
+    
+    <Label fx:id="statusLabel" textFill="red"/>
+
+    <ImageView fx:id="loginImage" fitHeight="150" fitWidth="150">
+        <image>
+            <Image url="@png-clipart-electronic-mailing-list-email.png" />
+        </image>
+    </ImageView>
+
+</VBox>

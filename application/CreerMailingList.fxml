@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="application.CreerMailingListController" style="-fx-padding: 20;">
+    <Label text="Créer une Mailing List" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+    
+    <TextField fx:id="nomMailingListField" promptText="Nom de la mailing list" maxWidth="300"/>
+    
+    <HBox spacing="10">
+        <TextField fx:id="adresseEmailField" promptText="Adresse email" />
+        <Button text="Ajouter" onAction="#ajouterAdresse"/>
+    </HBox>
+    
+    <ListView fx:id="listeAdresses" prefHeight="150" maxWidth="300"/>
+
+    <Button text="Valider" onAction="#validerMailingList" style="-fx-alignment: center-right;"/>
+</VBox>

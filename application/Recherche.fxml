@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.RechercheEmailController">
+
+    <!-- Partie gauche : Zone de recherche -->
+    <left>
+        <VBox fx:id="zoneRecherche" spacing="10">
+            <Label text="Critères de recherche" style="-fx-font-weight: bold;"/>
+            
+            <TextField fx:id="sujet" promptText="Sujet"/>
+            <TextField fx:id="categorie" promptText="Catégorie"/>
+            <TextField fx:id="corps" promptText="Contenu"/>
+            <TextField fx:id="adresseRecepteur" promptText="Adresse récepteur"/>
+            <DatePicker fx:id="date_envoi"/>
+
+            <Button text="Lancer la recherche" onAction="#handleLancerRecherche"/>
+        </VBox>
+    </left>
+
+    <!-- Partie centrale : Liste des résultats -->
+    <center>
+        <!-- ✅ Ajout du onMouseClicked ici -->
+        <ListView fx:id="listeEmails" prefWidth="300" onMouseClicked="#handleSelectionEmail"/>
+    </center>
+
+    <!-- Partie droite : Détails de l'email sélectionné -->
+    <right>
+        <VBox fx:id="zoneDetails" spacing="10" style="-fx-background-color: #f0f0f0;">
+            <Label text="Détails de l'email" style="-fx-font-weight: bold;" />
+
+            <Label text="Sujet:" />
+            <Label fx:id="detailSujet" wrapText="true" />
+
+            <Label text="Catégorie:" />
+            <Label fx:id="detailCategorie" wrapText="true" />
+
+            <Label text="Contenu:" />
+            <Label fx:id="detailCorps" wrapText="true" />
+
+            <Label text="Émetteur:" />
+            <Label fx:id="detailEmetteur" wrapText="true" />
+
+            <Label text="Récepteur:" />
+            <Label fx:id="detailRecepteur" wrapText="true" />
+
+            <Label text="Pièce(s) jointe(s):" />
+            <Label fx:id="detailPiecesJointes" wrapText="true" />
+        </VBox>
+    </right>
+
+</BorderPane>

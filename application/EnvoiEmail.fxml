@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.EnvoiEmailController" style="-fx-padding: 20;">
+    
+    <TextField fx:id="champDestinataires" promptText="À (séparés par des virgules)"/>
+    <TextField fx:id="champSujet" promptText="Sujet"/>
+    <TextArea fx:id="champCorps" promptText="Message..." prefRowCount="10"/>
+
+    <!-- Bouton pour ajouter pièce jointe -->
+    <Button text="Ajouter pièce jointe" onAction="#ajouterPieceJointe"/>
+    
+    <!-- Zone d'affichage des pièces jointes sélectionnées -->
+    <ListView fx:id="listePiecesJointes" prefHeight="100"/>
+
+    <!-- Bouton pour envoyer -->
+    <Button text="Envoyer" onAction="#envoyerEmail"/>
+
+</VBox>
+
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.EnvoiEmailController" style="-fx-padding: 20;">
+    
+    <TextField fx:id="champDestinataires" promptText="À (séparés par des virgules)"/>
+    <TextField fx:id="champSujet" promptText="Sujet"/>
+    <TextArea fx:id="champCorps" promptText="Message..." prefRowCount="10"/>
+    
+    <Button text="Envoyer" onAction="#envoyerEmail"/>
+
+</VBox>
+-->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.RechercheEmailController"
+      alignment="CENTER" style="-fx-padding: 20;">
+    
+   
+    <TextField fx:id="txtMotCle" promptText="Mot-clé (sujet/corps)" />
+    <DatePicker fx:id="dateMinPicker" promptText="Date minimale" />
+    <ComboBox fx:id="comboCategorie" promptText="Catégorie" />
+    <Button text="Rechercher" onAction="#handleRechercher" />
+    <ListView fx:id="listResultats" prefHeight="200" />
+    
+</VBox>

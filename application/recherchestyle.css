@@ -1,0 +1,52 @@
+/* Applique un fond clair à la fenêtre */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #e6f0fa, #ffffff);
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+}
+
+/* Style pour les champs de texte */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #b0c4de;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 6 10 6 10;
+}
+
+/* DatePicker stylé pareil que TextField */
+.date-picker {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #b0c4de;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+/* Bouton moderne */
+.button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: #357ABD;
+}
+
+/* Liste des emails */
+.list-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #b0c4de;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 5;
+}
+
+/* Carte de détails */
+#zoneDetails {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);
+}

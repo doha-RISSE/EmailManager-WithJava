@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="rootPane" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="application.MainController"
+         prefWidth="700" prefHeight="500"
+         styleClass="root">
+
+    <!-- HEADER -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 15;">
+            <Label fx:id="welcomeLabel" text="Bienvenue"/>
+        </HBox>
+    </top>
+
+    <!-- CONTENU -->
+    <center>
+        <HBox spacing="20" style="-fx-padding: 20;">
+            <!-- Emails Reçus -->
+            <VBox spacing="10" styleClass="email-box">
+                <Label text="Emails reçus"/>
+                <ListView fx:id="listEmailsRecus" minWidth="220" maxWidth="220" prefHeight="400" styleClass="list-view"/>
+            </VBox>
+
+            <!-- Emails Envoyés -->
+            <VBox spacing="10" styleClass="email-box">
+                <Label text="Emails envoyés"/>
+                <ListView fx:id="listEmailsEnvoyes" minWidth="220" maxWidth="220" prefHeight="400" styleClass="list-view"/>
+            </VBox>
+
+            <!-- Détails email -->
+            <VBox spacing="10" styleClass="email-details" prefWidth="240">
+                <Label fx:id="labelExpediteur" text="De : " wrapText="true"/>
+                <Label fx:id="labelDestinataires" text="À : " wrapText="true"/>
+                <Label fx:id="labelSujet" text="Sujet : " wrapText="true"/>
+                <Label fx:id="labelCategorie" text="Catégorie : " wrapText="true"/>
+                <TextArea fx:id="textAreaCorps" prefHeight="300" wrapText="true" editable="false"/>
+            </VBox>
+        </HBox>
+    </center>
+
+    <!-- BARRE LATÉRALE DROITE -->
+    <right>
+        <VBox fx:id="glassPane" styleClass="glass-pane" spacing="20" alignment="CENTER" 
+              visible="false" pickOnBounds="false" 
+              prefWidth="245" maxWidth="245">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Nouveau message"  maxWidth="Infinity" onAction="#ouvrirFenetreEnvoi"/>
+            <Button text="Créer Mailing List" onAction="#ouvrirFenetreCreerMailingList" />
+            
+             <Button fx:id="btnEnvoyerML" text="Envoyer à une mailing list" onAction="#handleEnvoyerML" />
+
+
+            <Button text="Recherche Emails" onAction="#handleAfficherRechercheEmail" maxWidth="Infinity" />
+
+            <Button text="Archivage" maxWidth="Infinity" onAction="#handleOuvrirArchivage"/>
+            <Button fx:id="btnRefresh" text="Rafraîchir" onAction="#handleRefresh"/>
+        </VBox>
+    </right>
+
+</BorderPane>

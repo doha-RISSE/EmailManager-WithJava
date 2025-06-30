@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.stage.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.NouveauEmailController"
+      spacing="10"  alignment="TOP_LEFT">
+    
+    <Label text="Destinataire(s)" />
+    <TextField fx:id="destinatairesField" promptText="Ex: user1@example.com, user2@example.com"/>
+
+    <Label text="Sujet" />
+    <TextField fx:id="sujetField" />
+
+    <Label text="Corps du message" />
+    <TextArea fx:id="corpsArea" prefRowCount="10" wrapText="true"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="Ajouter pièce jointe" onAction="#handleAjouterPieceJointe"/>
+        <Label fx:id="piecesJointesLabel" text="Aucune pièce jointe"/>
+    </HBox>
+
+    <Button text="Envoyer" onAction="#handleEnvoyer"/>
+
+</VBox>
